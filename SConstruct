@@ -2229,6 +2229,9 @@ def doConfigure(myenv):
 
     if use_system_version_of_library("yaml"):
         conf.FindSysLibDep("yaml", ["yaml-cpp"])
+    
+    if use_system_version_of_library("asio"):
+        conf.FindSysLibDep("asio", ["asio"])
 
     if use_system_version_of_library("intel_decimal128"):
         conf.FindSysLibDep("intel_decimal128", ["bid"])
